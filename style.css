@@ -1,0 +1,167 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+  --line: #d9e2ec;
+  --accent: #1f4e79;
+  --light: #f5f7fa;
+  --card: #ffffff;
+  --shadow: rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 3.5rem 0 1.6rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  max-width: 980px;
+}
+
+.tagline {
+  margin: 1rem 0 1.75rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 980px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  border-bottom: 1px solid var(--accent);
+}
+
+main {
+  padding: 2rem 0 4rem;
+}
+
+section {
+  padding: 2.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+p {
+  max-width: 880px;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.card.emphasis {
+  background: var(--light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.two-column {
+  columns: 2;
+  column-gap: 3rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  background: var(--light);
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column {
+    columns: 1;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.4rem 0;
+  }
+}
